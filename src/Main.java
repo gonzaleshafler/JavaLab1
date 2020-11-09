@@ -7,15 +7,17 @@ public class Main
 
     public static void main(String[] args)
     {
-
+        Main main=new Main();
+        main.run();
+    }
+    public void run()
+    {
         Calculate prog = new Calculate();
-
         prog.calcY(prog.a, prog.b, prog.x);
         prog.calcD(prog.a, prog.b, prog.x);
         prog.showAll();
         prog.showTime();
         prog.calculateSomeFunc();
-
     }
 }
 
@@ -41,7 +43,7 @@ class Calculate
     }
     public double calcD(double a, double b, double x)                         //Рахуємо значення d
     {
-        return  a*Math.pow(2.71828,-Math.sqrt(a))    *Math.cos((b*x)/a);      //2.71828  приблизне значення експоненти
+        return  a*Math.exp(-Math.sqrt(a))*Math.cos((b*x)/a);      //2.71828  приблизне значення експоненти
     }
     public void showInputData()                                               //Показати вхідні данні(данні котрі зберігаються в полях класу)
     {
